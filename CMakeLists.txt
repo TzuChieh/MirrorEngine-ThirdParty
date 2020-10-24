@@ -28,10 +28,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 
     # use C++17 (VS usually do not pick up previous requests)
-    set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} /std:c++17")
+    set(CMAKE_CXX_FLAGS     "${CMAKE_CXX_FLAGS} /std:c++17")
 
     # use PDB files for debugging, which also provides potential optimizations
-    set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} /Zi")
+    set(CMAKE_CXX_FLAGS     "${CMAKE_CXX_FLAGS} /Zi")
 
     if("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MDd")
@@ -40,7 +40,7 @@ if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
     endif()
 
     # use multithreaded compilation
-    set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} /MP")
+    set(CMAKE_CXX_FLAGS     "${CMAKE_CXX_FLAGS} /MP")
 
 # Using GCC
 elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
